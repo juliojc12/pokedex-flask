@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+    <title>Flask - App</title>
+</head>
+
+<body class="bg-zinc-900 text-white ">
+    <div class="h-screen w-full flex justify-center">
+        <div class="flex flex-col">
+            <div class="flex justify-center items-center">
+                <h1 class="text-5xl font-bold pb-10">Pokemons</h1>
+            </div>
+            <div class="flex gap-5 flex-wrap w-[1080px] items-center justify-center">
+                {% for pokemon in pokemons %}
+                <div class="flex w-[250px] h-[250px]">
+                    <div class="flex flex-col border-2 p-5">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{loop.index}}.svg"
+                            alt={{pokemon.name}} class="w-[200px] h-[200px] ">
+                        <div class="flex  items-center justify-center">
+                            <h3>{{ loop.index }}. {{pokemon.name}}</h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
